@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日研 3LOCK ミーリングチャック カタログ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 9pt;
+            line-height: 1.4;
+            color: #333;
+            background: #fff;
+        }
+
+        /* A4 Page */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 8mm 10mm;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #003366 0%, #004488 100%);
+            color: white;
+            padding: 4mm 5mm;
+            margin-bottom: 3mm;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 3mm;
+        }
+
+        .header-title {
+            font-size: 18pt;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .header-subtitle {
+            font-size: 11pt;
+            font-weight: 500;
+            color: #66CCFF;
+        }
+
+        .header-logo {
+            font-size: 16pt;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+
+        /* Tagline Section */
+        .tagline-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 3mm;
+            gap: 5mm;
+        }
+
+        .tagline-left {
+            flex: 1;
+        }
+
+        .tagline-main {
+            font-size: 16pt;
+            font-weight: 700;
+            color: #003366;
+            border: 2px solid #003366;
+            display: inline-block;
+            padding: 1mm 3mm;
+            margin-bottom: 2mm;
+        }
+
+        .tagline-features {
+            display: flex;
+            gap: 5mm;
+            font-size: 9pt;
+            color: #666;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-label {
+            font-size: 8pt;
+            color: #FF6600;
+        }
+
+        /* Product Info */
+        .product-info {
+            display: flex;
+            align-items: center;
+            gap: 3mm;
+            margin-bottom: 2mm;
+        }
+
+        .product-type {
+            font-size: 14pt;
+            font-weight: 700;
+            color: #003366;
+        }
+
+        .product-spec {
+            font-size: 9pt;
+            color: #666;
+        }
+
+        /* Dimension Diagram Placeholder */
+        .diagram-placeholder {
+            width: 50mm;
+            height: 25mm;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8pt;
+            color: #999;
+            background: #f9f9f9;
+        }
+
+        /* Table */
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8pt;
+            margin-bottom: 3mm;
+        }
+
+        .spec-table th {
+            background: #E0E0E0;
+            color: #333;
+            font-weight: 500;
+            padding: 1.5mm 1mm;
+            border: 0.5pt solid #ccc;
+            text-align: center;
+            font-size: 7pt;
+        }
+
+        .spec-table td {
+            padding: 1mm 1mm;
+            border: 0.5pt solid #ddd;
+            text-align: center;
+        }
+
+        .spec-table td.code {
+            text-align: left;
+            font-weight: 500;
+            padding-left: 2mm;
+        }
+
+        .spec-table td.numeric {
+            text-align: right;
+            padding-right: 2mm;
+            font-family: 'Noto Sans JP', monospace;
+        }
+
+        /* Taper Colors */
+        .taper-40 {
+            background: #E6F0FF;
+        }
+
+        .taper-50 {
+            background: #FFF5E6;
+        }
+
+        .taper-label {
+            font-weight: 700;
+            font-size: 8pt;
+        }
+
+        .taper-label.no40 {
+            color: #0066CC;
+        }
+
+        .taper-label.no50 {
+            color: #FF6600;
+        }
+
+        /* Collet Badges */
+        .collet-cell {
+            text-align: left !important;
+            padding-left: 1mm !important;
+        }
+
+        .collet-badge {
+            display: inline-block;
+            background: #FFD700;
+            border: 0.5pt solid #CC9900;
+            border-radius: 1mm;
+            padding: 0.3mm 1mm;
+            font-size: 6pt;
+            font-weight: 500;
+            margin-right: 0.5mm;
+            margin-bottom: 0.3mm;
+        }
+
+        /* Notes Section */
+        .notes-section {
+            font-size: 7pt;
+            color: #666;
+            line-height: 1.5;
+            margin-top: 2mm;
+            padding: 2mm;
+            background: #f9f9f9;
+            border-left: 2px solid #003366;
+        }
+
+        .note-item {
+            margin-bottom: 0.5mm;
+        }
+
+        .note-item::before {
+            content: "★";
+            color: #FF6600;
+            margin-right: 1mm;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 2mm;
+            padding-top: 2mm;
+            border-top: 0.5pt solid #ccc;
+        }
+
+        .code-explanation {
+            font-size: 7pt;
+            color: #666;
+        }
+
+        .code-example {
+            font-family: monospace;
+            font-size: 9pt;
+            font-weight: 700;
+            color: #003366;
+        }
+
+        .page-number {
+            font-size: 10pt;
+            font-weight: 700;
+            color: #003366;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .page {
+                page-break-after: always;
+                margin: 0;
+                padding: 5mm 8mm;
+            }
+        }
+
+        /* Alternating row colors within taper groups */
+        .spec-table tr:nth-child(even) td {
+            background: rgba(0,0,0,0.02);
+        }
+
+        .spec-table tr.taper-40:nth-child(even) td {
+            background: #DCE9F9;
+        }
+
+        .spec-table tr.taper-50:nth-child(even) td {
+            background: #FFEEDD;
+        }
+
+        /* Section divider in table */
+        .spec-table tr.taper-divider td {
+            border-top: 1.5pt solid #003366;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <div>
+                    <div class="header-title">日研 <span style="color: #66CCFF;">3LOCK</span> ミーリングチャック</div>
+                    <div class="header-subtitle">C 高圧センタスルー対応（MAX. 7MPa）</div>
+                </div>
+            </div>
+            <div class="header-logo">NIKKEN</div>
+        </div>
+
+        <!-- Tagline Section -->
+        <div class="tagline-section">
+            <div class="tagline-left">
+                <div class="tagline-main">切粉は正直</div>
+                <div class="tagline-features">
+                    <div class="feature-item">
+                        <div class="feature-label">静かに</div>
+                        <div>高速重切削</div>
+                    </div>
+                    <div class="feature-item">
+                        <div>安定した仕上切削</div>
+                    </div>
+                </div>
+            </div>
+            <div class="diagram-placeholder">
+                [寸法図]<br>L, ℓ1, ℓ2, ℓ3, φD, φC
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+            <span class="product-type">標準仕様</span>
+        </div>
+
+        <!-- Spec Table -->
+        <table class="spec-table">
+            <thead>
+                <tr>
+                    <th style="width: 8%;">テーパ</th>
+                    <th style="width: 18%;">Code No.</th>
+                    <th style="width: 6%;">D</th>
+                    <th style="width: 6%;">C</th>
+                    <th style="width: 7%;">L</th>
+                    <th style="width: 6%;">ℓ1</th>
+                    <th style="width: 6%;">ℓ2</th>
+                    <th style="width: 6%;">ℓ3</th>
+                    <th style="width: 8%;">重量(kg)</th>
+                    <th style="width: 29%;">適用コレット</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+
+        <!-- Notes Section -->
+        <div class="notes-section">
+            <div class="note-item">締付ハンドルは付属していません。別途ご注文下さい。P.289</div>
+            <div class="note-item">挿入刃物のシャンク径はh6～h7のものをご使用下さい。</div>
+            <div class="note-item">KM, CCKコレットは P.270, P.271を参照下さい。</div>
+            <div class="note-item">エンドミルで重切削をする場合、シャンク把握長はℓ1寸法より長くして下さい。</div>
+            <div class="note-item">＊印 はNK, CCNKコレットは使用出来ません。</div>
+            <div class="note-item">すべて直付センタスルー対応です。</div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="code-explanation">
+                <div style="margin-bottom: 1mm;">Code No.の説明（例）</div>
+                <div class="code-example">MBT40 - C20 - 70</div>
+                <div style="font-size: 6pt; margin-top: 1mm;">
+                    シャンク形状 ─ ミーリングチャックの内径φD ─ 基準面からの長さ
+                </div>
+            </div>
+            <div class="page-number">155</div>
+        </div>
+    </div>
+
+    <script>
+        // Product Data from Notion Export
+        const products = [
+            {"品番": "MBT40-C12-90", "テーパ": "No.40", "内径D": 12, "フランジ径C": 33, "全長L": 90, "把握長l1": 48, "深さl2": 53, "有効長l3": 58, "重量kg": 1.6, "適用コレット": ["KM12", "CCK12"]},
+            {"品番": "MBT40-C12-120", "テーパ": "No.40", "内径D": 12, "フランジ径C": 33, "全長L": 120, "把握長l1": 48, "深さl2": 53, "有効長l3": 58, "重量kg": 1.9, "適用コレット": ["KM12", "CCK12"]},
+            {"品番": "MBT40-C16-60", "テーパ": "No.40", "内径D": 16, "フランジ径C": 44, "全長L": 63, "把握長l1": 50, "深さl2": 58, "有効長l3": 65, "重量kg": 1.4, "適用コレット": ["KM16", "CCK16"]},
+            {"品番": "MBT40-C16-90", "テーパ": "No.40", "内径D": 16, "フランジ径C": 44, "全長L": 90, "把握長l1": 50, "深さl2": 58, "有効長l3": 65, "重量kg": 1.7, "適用コレット": ["KM16", "CCK16"]},
+            {"品番": "MBT40-C16-120", "テーパ": "No.40", "内径D": 16, "フランジ径C": 44, "全長L": 120, "把握長l1": 50, "深さl2": 58, "有効長l3": 65, "重量kg": 2.0, "適用コレット": ["KM16", "CCK16"]},
+            {"品番": "MBT40-C20-70", "テーパ": "No.40", "内径D": 20, "フランジ径C": 52, "全長L": 71, "把握長l1": 57, "深さl2": 66, "有効長l3": 80, "重量kg": 1.6, "適用コレット": ["KM20", "CCK20", "CCNK20", "NK20"]},
+            {"品番": "MBT40-C20-90", "テーパ": "No.40", "内径D": 20, "フランジ径C": 52, "全長L": 90, "把握長l1": 57, "深さl2": 66, "有効長l3": 80, "重量kg": 1.8, "適用コレット": ["KM20", "CCK20", "CCNK20", "NK20"]},
+            {"品番": "MBT40-C20-120", "テーパ": "No.40", "内径D": 20, "フランジ径C": 52, "全長L": 120, "把握長l1": 57, "深さl2": 66, "有効長l3": 80, "重量kg": 2.2, "適用コレット": ["KM20", "CCK20", "CCNK20", "NK20"]},
+            {"品番": "MBT40-C25-70", "テーパ": "No.40", "内径D": 25, "フランジ径C": 60, "全長L": 70, "把握長l1": 60, "深さl2": 72, "有効長l3": 80, "重量kg": 1.8, "適用コレット": ["KM25", "CCK25", "CCNK25", "NK25"]},
+            {"品番": "MBT40-C25-90", "テーパ": "No.40", "内径D": 25, "フランジ径C": 60, "全長L": 90, "把握長l1": 60, "深さl2": 72, "有効長l3": 80, "重量kg": 2.1, "適用コレット": ["KM25", "CCK25", "CCNK25", "NK25"]},
+            {"品番": "MBT40-C25-120", "テーパ": "No.40", "内径D": 25, "フランジ径C": 60, "全長L": 120, "把握長l1": 60, "深さl2": 72, "有効長l3": 80, "重量kg": 2.5, "適用コレット": ["KM25", "CCK25", "CCNK25", "NK25"]},
+            {"品番": "MBT40-C32-85", "テーパ": "No.40", "内径D": 32, "フランジ径C": 69, "全長L": 85, "把握長l1": 64, "深さl2": 71, "有効長l3": 75, "重量kg": 2.1, "適用コレット": ["KM32", "CCK32"], "note": "*"},
+            {"品番": "MBT40-C32-105", "テーパ": "No.40", "内径D": 32, "フランジ径C": 69, "全長L": 105, "把握長l1": 70, "深さl2": 81, "有効長l3": 81, "重量kg": 2.5, "適用コレット": ["KM32", "CCK32", "CCNK32", "NK32"]},
+            {"品番": "MBT40-C32-120", "テーパ": "No.40", "内径D": 32, "フランジ径C": 69, "全長L": 120, "把握長l1": 70, "深さl2": 81, "有効長l3": 81, "重量kg": 2.8, "適用コレット": ["KM32", "CCK32", "CCNK32", "NK32"]},
+            {"品番": "MBT50-C12-105", "テーパ": "No.50", "内径D": 12, "フランジ径C": 33, "全長L": 105, "把握長l1": 48, "深さl2": 53, "有効長l3": 53, "重量kg": 4.0, "適用コレット": ["KM12", "CCK12"]},
+            {"品番": "MBT50-C12-165", "テーパ": "No.50", "内径D": 12, "フランジ径C": 33, "全長L": 165, "把握長l1": 48, "深さl2": 53, "有効長l3": 53, "重量kg": 4.6, "適用コレット": ["KM12", "CCK12"]},
+            {"品番": "MBT50-C16-105", "テーパ": "No.50", "内径D": 16, "フランジ径C": 44, "全長L": 105, "把握長l1": 50, "深さl2": 58, "有効長l3": 58, "重量kg": 4.2, "適用コレット": ["KM16", "CCK16"]},
+            {"品番": "MBT50-C16-165", "テーパ": "No.50", "内径D": 16, "フランジ径C": 44, "全長L": 165, "把握長l1": 50, "深さl2": 58, "有効長l3": 58, "重量kg": 4.8, "適用コレット": ["KM16", "CCK16"]},
+            {"品番": "MBT50-C16-200", "テーパ": "No.50", "内径D": 16, "フランジ径C": 44, "全長L": 200, "把握長l1": 50, "深さl2": 58, "有効長l3": 58, "重量kg": 5.1, "適用コレット": ["KM16", "CCK16"]},
+            {"品番": "MBT50-C20-105", "テーパ": "No.50", "内径D": 20, "フランジ径C": 52, "全長L": 105, "把握長l1": 57, "深さl2": 66, "有効長l3": 66, "重量kg": 4.5, "適用コレット": ["KM20", "CCK20", "CCNK20", "NK20"]},
+            {"品番": "MBT50-C20-165", "テーパ": "No.50", "内径D": 20, "フランジ径C": 52, "全長L": 165, "把握長l1": 57, "深さl2": 66, "有効長l3": 66, "重量kg": 5.1, "適用コレット": ["KM20", "CCK20", "CCNK20", "NK20"]},
+            {"品番": "MBT50-C20-200", "テーパ": "No.50", "内径D": 20, "フランジ径C": 52, "全長L": 200, "把握長l1": 57, "深さl2": 66, "有効長l3": 66, "重量kg": 5.7, "適用コレット": ["KM20", "CCK20", "CCNK20", "NK20"]},
+            {"品番": "MBT50-C25-105", "テーパ": "No.50", "内径D": 25, "フランジ径C": 60, "全長L": 105, "把握長l1": 60, "深さl2": 72, "有効長l3": 72, "重量kg": 4.8, "適用コレット": ["KM25", "CCK25", "CCNK25", "NK25"]},
+            {"品番": "MBT50-C25-135", "テーパ": "No.50", "内径D": 25, "フランジ径C": 60, "全長L": 135, "把握長l1": 60, "深さl2": 72, "有効長l3": 72, "重量kg": 5.2, "適用コレット": ["KM25", "CCK25", "CCNK25", "NK25"]},
+            {"品番": "MBT50-C25-165", "テーパ": "No.50", "内径D": 25, "フランジ径C": 60, "全長L": 165, "把握長l1": 60, "深さl2": 72, "有効長l3": 72, "重量kg": 5.6, "適用コレット": ["KM25", "CCK25", "CCNK25", "NK25"]},
+            {"品番": "MBT50-C32-90", "テーパ": "No.50", "内径D": 32, "フランジ径C": 69, "全長L": 90, "把握長l1": 70, "深さl2": 81, "有効長l3": 81, "重量kg": 4.3, "適用コレット": ["KM32", "CCK32", "CCNK32", "NK32"]},
+            {"品番": "MBT50-C32-105", "テーパ": "No.50", "内径D": 32, "フランジ径C": 69, "全長L": 105, "把握長l1": 70, "深さl2": 81, "有効長l3": 81, "重量kg": 4.6, "適用コレット": ["KM32", "CCK32", "CCNK32", "NK32"]},
+            {"品番": "MBT50-C32-120", "テーパ": "No.50", "内径D": 32, "フランジ径C": 69, "全長L": 120, "把握長l1": 70, "深さl2": 81, "有効長l3": 81, "重量kg": 5.1, "適用コレット": ["KM32", "CCK32", "CCNK32", "NK32"]},
+            {"品番": "MBT50-C32-135", "テーパ": "No.50", "内径D": 32, "フランジ径C": 69, "全長L": 135, "把握長l1": 70, "深さl2": 81, "有効長l3": 81, "重量kg": 5.6, "適用コレット": ["KM32", "CCK32", "CCNK32", "NK32"]},
+            {"品番": "MBT50-C32-165", "テーパ": "No.50", "内径D": 32, "フランジ径C": 69, "全長L": 165, "把握長l1": 70, "深さl2": 81, "有効長l3": 81, "重量kg": 6.4, "適用コレット": ["KM32", "CCK32", "CCNK32", "NK32"]},
+            {"品番": "MBT50-C32-200", "テーパ": "No.50", "内径D": 32, "フランジ径C": 69, "全長L": 200, "把握長l1": 70, "深さl2": 81, "有効長l3": 81, "重量kg": 7.8, "適用コレット": ["KM32", "CCK32", "CCNK32", "NK32"]},
+            {"品番": "MBT50-C32-250", "テーパ": "No.50", "内径D": 32, "フランジ径C": 69, "全長L": 250, "把握長l1": 70, "深さl2": 81, "有効長l3": 81, "重量kg": 9.2, "適用コレット": ["KM32", "CCK32", "CCNK32", "NK32"]},
+            {"品番": "MBT50-C32-300", "テーパ": "No.50", "内径D": 32, "フランジ径C": 69, "全長L": 300, "把握長l1": 70, "深さl2": 81, "有効長l3": 81, "重量kg": 10.6, "適用コレット": ["KM32", "CCK32", "CCNK32", "NK32"]},
+            {"品番": "MBT50-C42-95", "テーパ": "No.50", "内径D": 42, "フランジ径C": 86, "全長L": 95, "把握長l1": 73, "深さl2": 80, "有効長l3": 85, "重量kg": 5.5, "適用コレット": ["KM42", "CCK42"], "note": "*"},
+            {"品番": "MBT50-C42-120", "テーパ": "No.50", "内径D": 42, "フランジ径C": 86, "全長L": 120, "把握長l1": 73, "深さl2": 105, "有効長l3": 110, "重量kg": 6.6, "適用コレット": ["KM42", "CCK42", "CCNK42", "NK42"]},
+            {"品番": "MBT50-C42-135", "テーパ": "No.50", "内径D": 42, "フランジ径C": 86, "全長L": 135, "把握長l1": 73, "深さl2": 105, "有効長l3": 110, "重量kg": 7.2, "適用コレット": ["KM42", "CCK42", "CCNK42", "NK42"]},
+            {"品番": "MBT50-C42-165", "テーパ": "No.50", "内径D": 42, "フランジ径C": 86, "全長L": 165, "把握長l1": 73, "深さl2": 115, "有効長l3": 125, "重量kg": 8.6, "適用コレット": ["KM42", "CCK42", "CCNK42", "NK42"]},
+            {"品番": "MBT50-C42-200", "テーパ": "No.50", "内径D": 42, "フランジ径C": 86, "全長L": 200, "把握長l1": 73, "深さl2": 115, "有効長l3": 125, "重量kg": 9.5, "適用コレット": ["KM42", "CCK42", "CCNK42", "NK42"]},
+            {"品番": "MBT50-C42-250", "テーパ": "No.50", "内径D": 42, "フランジ径C": 86, "全長L": 250, "把握長l1": 73, "深さl2": 115, "有効長l3": 125, "重量kg": 11.7, "適用コレット": ["KM42", "CCK42", "CCNK42", "NK42"]},
+            {"品番": "MBT50-C42-300", "テーパ": "No.50", "内径D": 42, "フランジ径C": 86, "全長L": 300, "把握長l1": 73, "深さl2": 115, "有効長l3": 125, "重量kg": 14.0, "適用コレット": ["KM42", "CCK42", "CCNK42", "NK42"]}
+        ];
+
+        // Render Table
+        function renderTable() {
+            const tbody = document.getElementById('tableBody');
+            let html = '';
+            let currentTaper = '';
+            let isFirstNo50 = true;
+
+            products.forEach((p, index) => {
+                const taperClass = p.テーパ === 'No.40' ? 'taper-40' : 'taper-50';
+                const taperLabelClass = p.テーパ === 'No.40' ? 'no40' : 'no50';
+                
+                // Add divider before No.50 section
+                let dividerClass = '';
+                if (p.テーパ === 'No.50' && isFirstNo50) {
+                    dividerClass = 'taper-divider';
+                    isFirstNo50 = false;
+                }
+
+                // Show taper label only when it changes
+                const showTaper = p.テーパ !== currentTaper;
+                currentTaper = p.テーパ;
+
+                // Format code number (show note if exists)
+                const codeDisplay = p.note ? `${p.品番}<sup>${p.note}</sup>` : p.品番;
+
+                // Collet badges
+                const colletBadges = p.適用コレット.map(c => 
+                    `<span class="collet-badge">${c}</span>`
+                ).join('');
+
+                html += `
+                    <tr class="${taperClass} ${dividerClass}">
+                        <td>${showTaper ? `<span class="taper-label ${taperLabelClass}">${p.テーパ}</span>` : ''}</td>
+                        <td class="code">${codeDisplay}</td>
+                        <td class="numeric">${p.内径D}</td>
+                        <td class="numeric">${p.フランジ径C}</td>
+                        <td class="numeric">${p.全長L}</td>
+                        <td class="numeric">${p.把握長l1}</td>
+                        <td class="numeric">${p.深さl2}</td>
+                        <td class="numeric">${p.有効長l3}</td>
+                        <td class="numeric">${p.重量kg}</td>
+                        <td class="collet-cell">${colletBadges}</td>
+                    </tr>
+                `;
+            });
+
+            tbody.innerHTML = html;
+        }
+
+        // Initialize
+        renderTable();
+    </script>
+</body>
+</html>
